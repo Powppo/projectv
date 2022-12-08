@@ -22,3 +22,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/homex', [App\Http\Controllers\inputController::class, 'input'])->name('input');
+Route::get('/index2', [App\Http\Controllers\inputController::class, 'index2'])->name('index2');
+

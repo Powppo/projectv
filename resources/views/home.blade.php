@@ -2,7 +2,6 @@
 
 @section('content')
 <head>
-	<title>Only Ghosals'</title>
 
 	<style>
 		body {
@@ -20,8 +19,8 @@
 		</h3>
 		
 		<h3>***Booking Only For Today***</h3>
-		</br></br>
-
+		<br>
+		<br>
 		<form method="POST" action="{{ route('input') }}">
             @csrf
 			<table>
@@ -56,9 +55,12 @@
 					<td><input type="submit" name="submit"
 						value="Submit" />
 					</td>
-				</tr>
 			</table>
 		</form>
+		<td>
+			<form method="get" action="{{route('index2')}}">
+			<button style="position: fixed; margin-left: 140px">Result</button>
+		</td>
 	</center>
 </body>
 @endsection

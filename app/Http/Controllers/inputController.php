@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\input;
+use App\Models\Input;
 
 class inputController extends Controller
 {
@@ -27,5 +27,11 @@ class inputController extends Controller
             return redirect('home')->with('status', 'Feedback Denied');
 
         }
+    }
+
+    public function index2()
+    {
+        $input = Input::all();
+        return view('home2', compact('input'));
     }
 }
